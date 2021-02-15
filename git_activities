@@ -1,0 +1,116 @@
+#!/bin/bash
+
+git init
+
+git config --global user.name 'Jordan Iwase'
+git config --global user.emaul 'jiwase@asu.edu'
+
+
+git add japi.out
+git add japi.py
+
+
+git commit -m 'comment string'
+
+git commit -am 'comment string'
+
+git status
+
+git status -s
+echo 'hello there' > hello.txt
+
+git status
+git status -s
+
+git add hello.txt
+git status
+
+echo 'we are testing git status' >> hello.txt
+
+git status
+
+git diff
+
+git commit -m 'comment'
+git status
+
+git add hello.txt
+git status
+
+git log
+git status -s
+
+git log --oneline
+
+git branch
+
+echo 'master version' >> hello.txt
+
+git commit -am 'master version'
+
+git branch feature
+
+git branch
+git checkout feature
+
+git branch
+
+git 'new file' > hello_feature
+
+echo 'feature version' >> hello.txt
+
+git add hello.txt
+git add hello_feature
+
+git commit -m 'feature version'
+
+git checkout master
+
+git branch
+echo 'initial content' > merge.txt
+
+git add merge.txt
+git commit -m 'adding new file on master'
+
+git branch newbranch
+
+echo 'update on master' > merge.txt
+
+git add merge.txt
+git commit -m 'update on master'
+
+git checkout newbranch
+
+echo 'update on newbranch' > merge.txt
+
+git commit -am 'update on newbranch'
+
+git checkout master
+git merge newbranch
+
+git status
+cat merge.txt
+
+echo 'merged version' > merge.txt
+
+git add merge.txt
+git commit -m 'fixed conflicts'
+
+git status
+git branch -d newbranch
+
+echo 'file to delete' > to_delte.txt
+git add to_delete.txt
+git commit -m 'yet another lab file'
+git rm to_delete.txt
+git status
+ls
+git reset --hard HEAD
+git status
+ls
+
+git rm to_delete.txt
+git status -sb
+git commit -m '<file deletion>'
+
+
